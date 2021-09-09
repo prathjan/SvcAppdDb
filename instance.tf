@@ -3,9 +3,13 @@ data "terraform_remote_state" "global" {
   config = {
     organization = "Lab14"
     workspaces = {
-      name = local.globalwsname
+      name = var.globalwsname
     }
   }
+}
+
+variable "globalwsname" {
+  type = string
 }
 
 # Configure the VMware vSphere Provider
