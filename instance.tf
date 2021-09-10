@@ -148,7 +148,6 @@ output "vm_ip" {
 
 locals {
   mysql_pass = yamldecode(data.terraform_remote_state.global.outputs.mysql_pass)
-  globalwsname = yamldecode(data.terraform_remote_state.global.outputs.globalwsname)
   vsphere_user = yamldecode(data.terraform_remote_state.global.outputs.vsphere_user)
   vsphere_password = yamldecode(data.terraform_remote_state.global.outputs.vsphere_password)
   vsphere_server = yamldecode(data.terraform_remote_state.global.outputs.vsphere_server)
